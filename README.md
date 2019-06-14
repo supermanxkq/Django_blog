@@ -47,15 +47,15 @@
 
 
        ```
-        INSTALLED_APPS = [
-        'django.contrib.admin',
-        'django.contrib.auth',
-        'django.contrib.contenttypes',
-        'django.contrib.sessions',
-        'django.contrib.messages',
-        'django.contrib.staticfiles',
-        'blog',
-        ]
+            INSTALLED_APPS = [
+            'django.contrib.admin',
+            'django.contrib.auth',
+            'django.contrib.contenttypes',
+            'django.contrib.sessions',
+            'django.contrib.messages',
+            'django.contrib.staticfiles',
+            'blog',
+            ]
         ```
 * 新建相关文件夹
   在blog目录下，新建templates、static两个文件夹（文件夹名字千万不能错），templates文件夹中，存放html文件；static文件夹存放资源文件，该文件夹中新建css、img、js三个文件夹，存放对应的资源文件。利用pycharm在templates文件目录下新建一个blog.html的空html文件
@@ -64,9 +64,9 @@
 
 
     ```
-    def index(request):
-        blogs = Blog.objects.all()
-        return render(request, "blog.html", {'blog': blogs})
+        def index(request):
+            blogs = Blog.objects.all()
+            return render(request, "blog.html", {'blog': blogs})
     ```
  * 生成数据库表
     * 把model转换成中间件
