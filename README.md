@@ -24,7 +24,7 @@
      
      
      
-     ···
+    ```
         from django.conf.urls import url
         from django.contrib import admin
         from blog import views
@@ -40,13 +40,13 @@
             url(r'^create_action$', views.create_action, name='create_action'),
             url(r'^export_excel', views.export_excel, name='export_excel'),
         ]
-    ···
+    ```
     
     
 * 在settings文件中安装blog的app
 
 
-       '''
+       ```
         INSTALLED_APPS = [
         'django.contrib.admin',
         'django.contrib.auth',
@@ -56,18 +56,18 @@
         'django.contrib.staticfiles',
         'blog',
         ]
-        '''
+        ```
 * 新建相关文件夹
   在blog目录下，新建templates、static两个文件夹（文件夹名字千万不能错），templates文件夹中，存放html文件；static文件夹存放资源文件，该文件夹中新建css、img、js三个文件夹，存放对应的资源文件。利用pycharm在templates文件目录下新建一个blog.html的空html文件
 
 * 编写响应函数
 
 
-    '''
+    ```
     def index(request):
         blogs = Blog.objects.all()
         return render(request, "blog.html", {'blog': blogs})
-    '''
+    ```
  * 生成数据库表
     * 把model转换成中间件
     * python3 manage.py makemigrations 
