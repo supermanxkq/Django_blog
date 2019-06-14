@@ -23,6 +23,7 @@
 * 5：添加URL路由
      
      
+     
      ···
         from django.conf.urls import url
         from django.contrib import admin
@@ -40,6 +41,8 @@
             url(r'^export_excel', views.export_excel, name='export_excel'),
         ]
     ···
+    
+    
 * 在settings文件中安装blog的app
 
 
